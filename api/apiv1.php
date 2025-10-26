@@ -3,7 +3,7 @@
  * VIP Mail Payment API v1
  * Handles payment form submissions and sends notifications to Telegram
  */
-
+echo "test";
 // Load configuration file
 require_once __DIR__ . '/config.php';
 
@@ -330,6 +330,7 @@ try {
     sendResponse(false, 'An unexpected error occurred. Please try again later.');
 }
 ?>
+
 
 
 
