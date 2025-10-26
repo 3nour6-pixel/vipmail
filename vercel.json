@@ -4,18 +4,26 @@
       "runtime": "vercel-php@0.7.1"
     }
   },
-  "rewrites": [
+  "cleanUrls": true, 
+  "trailingSlash": false, 
+
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "statusCode": 301 
+    },
+
+
     {
       "source": "/(.*)\\.html",
-      "destination": "/$1"
+      "destination": "/$1",
+      "statusCode": 301
     },
     {
       "source": "/(.*)\\.php",
-      "destination": "/$1"
-    },
-    {
-      "source": "/index.html",
-      "destination": "/"
+      "destination": "/$1",
+      "statusCode": 301
     }
   ]
 }
