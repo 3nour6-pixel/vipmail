@@ -1,4 +1,5 @@
 <?php
+echo "test";
 /**
  * VIP Mail Payment API v1
  * Handles payment form submissions and sends notifications to Telegram
@@ -332,6 +333,7 @@ try {
     sendResponse(false, 'An unexpected error occurred. Please try again later.');
 }
 ?>
+
 
 
 
