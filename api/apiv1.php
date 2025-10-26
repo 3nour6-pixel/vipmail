@@ -1,5 +1,5 @@
 <?php
-echo "test";
+
 /**
  * VIP Mail Payment API v1
  * Handles payment form submissions and sends notifications to Telegram
@@ -10,9 +10,7 @@ require_once __DIR__ . '/config.php';
 
 // Enable error reporting for debugging (disable in production)
 error_reporting(E_ALL);
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+ini_set('display_errors', 0);
 ini_set('log_errors', 1);
 ini_set('error_log', __DIR__ . '/error.log');
 
@@ -333,6 +331,7 @@ try {
     sendResponse(false, 'An unexpected error occurred. Please try again later.');
 }
 ?>
+
 
 
 
