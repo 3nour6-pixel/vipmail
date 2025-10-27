@@ -5,7 +5,12 @@
     }
   },
 
-
+  "rewrites": [
+    {
+      "source": "/:path((?!api/|.*\\.).*)",
+      "destination": "/:path.html"
+    }
+  ],
 
   "headers": [
     {
@@ -32,7 +37,6 @@
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     },
-    
     {
       "source": "/:path((?!api/.*).*)",
       "has": [ { "type": "header", "key": "Accept", "value": "text/html" } ],
@@ -42,7 +46,6 @@
         { "key": "Expires", "value": "0" }
       ]
     },
-
     {
       "source": "/:path((?!api/.*).*)",
       "headers": [
