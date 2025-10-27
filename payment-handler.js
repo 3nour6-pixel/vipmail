@@ -153,7 +153,7 @@ async function handleFormSubmit(event, formId) {
     
     try {
         // Send data to API
-        const response = await fetch('api/apiv1.php', {
+        const response = await fetch('api/apiv1', {
             method: 'POST',
             body: formData
         });
@@ -247,6 +247,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
 
 
 
