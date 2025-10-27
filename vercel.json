@@ -98,7 +98,7 @@
         }
       ]
     },
-    .*).jpg",
+      "source": "/(.*).jpg",
       "headers": [
         {
           "key": "Cache-Control",
