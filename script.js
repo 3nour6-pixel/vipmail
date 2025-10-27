@@ -74,8 +74,9 @@ document.querySelectorAll('.btn-primary').forEach(button => {
 });
 
 document.querySelectorAll('.btn-login').forEach(button => {
-    button.addEventListener('click', function() {
-        alert('سيتم توجيهك لصفحة تسجيل الدخول قريباً!');
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+        showNotification();
     });
 });
 
@@ -369,4 +370,52 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Notification System
+function createNotificationContainer() {
+    let container = document.getElementById('notification-container');
+    if (!container) {
+        container = document.createElement('div');
+        container.id = 'notification-container';
+        container.className = 'notification-container';
+        document.body.appendChild(container);
+    }
+    return container;
+}
 
+function showNotification() {
+    const container = createNotificationContainer();
+    
+    const notification = document.createElement('div');
+    notification.className = 'notification';
+    
+    const title = currentLang === 'ar' 
+        ? 'تسجيل الدخول مقتصر على الأعضاء' 
+        : 'Login Restricted to Members';
+    
+    const message = currentLang === 'ar'
+        ? 'فقط الأعضاء المشتركين يمكنهم تسجيل الدخول'
+        : 'Only subscribed members can sign in';
+    
+    notification.innerHTML = `
+        <div class="notification-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
+                <path d="m9 12 2 2 4-4"/>
+            </svg>
+        </div>
+        <div class="notification-content">
+            <h4 class="notification-title">${title}</h4>
+            <p class="notification-message">${message}</p>
+        </div>
+        <div class="notification-progress"></div>
+    `;
+    
+    container.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.classList.add('hiding');
+        setTimeout(() => {
+            container.removeChild(notification);
+        }, 300);
+    }, 2000);
+}
