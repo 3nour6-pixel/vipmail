@@ -417,5 +417,5 @@ function showNotification() {
         setTimeout(() => {
             container.removeChild(notification);
         }, 300);
-    }, 2000);
+    }, 5000 );
 }
