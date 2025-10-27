@@ -2178,7 +2178,7 @@ html[dir="rtl"] .notification.hiding {
     background: linear-gradient(to right, var(--gold), var(--purple));
     width: 100%;
     transform-origin: left;
-    animation: progress 2s linear forwards;
+    animation: progress 5s linear forwards;
     box-shadow: 0 0 10px hsla(47, 96%, 53%, 0.6);
 }
 
