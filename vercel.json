@@ -22,11 +22,6 @@
       "source": "/(.*)\\.html",
       "destination": "/$1",
       "statusCode": 301
-    },
-    {
-      "source": "/(.*)\\.php",
-      "destination": "/$1",
-      "statusCode": 301
     }
   ],
 
