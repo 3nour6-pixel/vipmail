@@ -1,5 +1,4 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
   "functions": {
     "api/**/*.php": {
       "runtime": "vercel-php@0.7.1"
@@ -14,73 +13,14 @@
       "statusCode": 301
     },
     {
-      "source": "/:path(.*)\\.html",
-      "destination": "/:path",
+      "source": "/(.*)\\.html",
+      "destination": "/$1",
       "statusCode": 301
     },
     {
-      "source": "/:path(.*)\\.php",
-      "destination": "/:path",
+      "source": "/(.*)\\.php",
+      "destination": "/$1",
       "statusCode": 301
-    }
-  ],
-  "headers": [
-    {
-      "source": "/:path(.*)\\.html",
-      "headers": [
-        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" },
-        { "key": "Pragma",       "value": "no-cache" },
-        { "key": "Expires",      "value": "0" }
-      ]
-    },
-    {
-      "source": "/:path(.*)\\.php",
-      "headers": [
-        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" },
-        { "key": "Pragma",       "value": "no-cache" },
-        { "key": "Expires",      "value": "0" }
-      ]
-    },
-    {
-      "source": "/",
-      "headers": [
-        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" },
-        { "key": "Pragma",       "value": "no-cache" },
-        { "key": "Expires",      "value": "0" }
-      ]
-    },
-    {
-      "source": "/:path(.*)\\.css",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-      ]
-    },
-    {
-      "source": "/:path(.*)\\.js",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-      ]
-    },
-    {
-      "source": "/:path(.*)\\.(?:jpg|jpeg|png|gif|webp|svg|ico)",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=2592000" }
-      ]
-    },
-    {
-      "source": "/:path(.*)\\.(?:woff|woff2|ttf|eot)",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-      ]
-    },
-    {
-      "source": "/:path(.*)",
-      "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options",        "value": "DENY" },
-        { "key": "X-XSS-Protection",       "value": "1; mode=block" },
-        { "key": "Referrer-Policy",         "value": "strict-origin-when-cross-origin" }
-      ]
     }
   ]
 }
