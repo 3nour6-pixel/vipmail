@@ -61,10 +61,5 @@ function validateConfig() {
 }
 
 // Only validate and show errors in development mode
-if (DEBUG_MODE) {
-    $configErrors = validateConfig();
-    if (!empty($configErrors)) {
-        error_log("Configuration Errors: " . implode(", ", $configErrors));
-    }
-}
+
 ?>
