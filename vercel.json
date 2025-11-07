@@ -22,6 +22,5 @@
       "destination": "/$1",
       "statusCode": 301
     }
-  ],
-  "error": true
+  ]
 }
