@@ -70,7 +70,7 @@ const translations = {
         about_values_title: "Our Core Values",
         about_value1: "Advanced Security: We use the highest levels of encryption and Fastmail's secure infrastructure to protect all your correspondence from any hacking or spying.",
         about_value2: "Uniqueness and Distinction: Your premium email address (@vipm.org) is a reflection of your sophisticated digital identity.",
-        about_value3: "Reliable Infrastructure: We use Fastmail, a trusted email provider with ISO 27001 certification and GDPR compliance, to ensure service continuity and data protection.",
+        about_value3: "Reliable Infrastructure: We use Fastmail, a trusted email provider, to ensure service continuity and data protection.",
 
         // Contact Page
         contact_title: "Contact Us",
@@ -226,7 +226,7 @@ const translations = {
         about_values_title: "قيمنا الأساسية",
         about_value1: "الأمان المتقدم: نستخدم أعلى مستويات التشفير والبنية التحتية الآمنة لـ Fastmail لحماية جميع مراسلاتك من أي اختراق أو تجسس.",
         about_value2: "التفرد والتميز: عنوان بريدك الإلكتروني المميز (@vipm.org) هو انعكاس لهويتك الرقمية الراقية.",
-        about_value3: "بنية تحتية موثوقة: نستخدم Fastmail، مزود بريد إلكتروني موثوق حاصل على شهادة ISO 27001 ومتوافق مع GDPR، لضمان استمرارية الخدمة وحماية البيانات.",
+        about_value3: "بنية تحتية موثوقة: نحن نستخدم Fastmail، وهو مزود خدمة بريد إلكتروني موثوق، لضمان استمرارية الخدمة وحماية البيانات.",
 
         // Contact Page
         contact_title: "اتصل بنا",
