@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | VIP Mail</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="styles.css?v=1.0.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="translations.js?v=1.0.0"></script>
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 2rem 1rem;
+        }
+
+        .error-bg {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom right, var(--background), var(--background), hsl(240, 10%, 8%));
+        }
+
+        .error-gradient-1 {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at top, hsla(47, 96%, 53%, 0.15), transparent 50%);
+        }
+
+        .error-gradient-2 {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at bottom right, hsla(280, 70%, 60%, 0.15), transparent 50%);
+        }
+
+        .error-grid {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(hsla(240, 10%, 15%, 0.1) 1px, transparent 1px),
+                linear-gradient(to right, hsla(240, 10%, 15%, 0.1) 1px, transparent 1px);
+            background-size: 4rem 4rem;
+            mask-image: radial-gradient(ellipse at center, black 50%, transparent 100%);
+        }
+
+        .error-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .error-icon {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 2rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, hsla(47, 96%, 53%, 0.2), hsla(280, 70%, 60%, 0.2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            animation: pulse-icon 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-icon {
+            0%, 100% {
+                box-shadow: 0 0 0 0 hsla(47, 96%, 53%, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 0 20px hsla(47, 96%, 53%, 0);
+            }
+        }
+
+        .error-icon svg {
+            color: var(--gold);
+            filter: drop-shadow(0 0 20px hsla(47, 96%, 53%, 0.6));
+        }
+
+        .error-number {
+            font-size: clamp(5rem, 15vw, 10rem);
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, var(--gold-light), var(--gold), hsl(47, 96%, 60%));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: drop-shadow(0 0 20px hsla(47, 96%, 53%, 0.6)) drop-shadow(0 0 40px hsla(47, 96%, 53%, 0.4));
+            animation: gold-glow 3s ease-in-out infinite;
+        }
+
+        @keyframes gold-glow {
+            0%, 100% {
+                filter: drop-shadow(0 0 20px hsla(47, 96%, 53%, 0.6)) drop-shadow(0 0 40px hsla(47, 96%, 53%, 0.4));
+            }
+            50% {
+                filter: drop-shadow(0 0 30px hsla(47, 96%, 53%, 0.8)) drop-shadow(0 0 60px hsla(47, 96%, 53%, 0.6));
+            }
+        }
+
+        .error-title {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--foreground);
+        }
+
+        .error-description {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: var(--muted-foreground);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .error-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (min-width: 640px) {
+            .error-buttons {
+                flex-direction: row;
+            }
+        }
+
+        .floating-elements {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .floating-element {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, hsla(47, 96%, 53%, 0.1), hsla(280, 70%, 60%, 0.1));
+            animation: float 15s ease-in-out infinite;
+        }
+
+        .floating-element:nth-child(1) {
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-element:nth-child(2) {
+            top: 70%;
+            left: 80%;
+            animation-delay: 3s;
+            width: 150px;
+            height: 150px;
+        }
+
+        .floating-element:nth-child(3) {
+            top: 40%;
+            right: 10%;
+            animation-delay: 6s;
+            width: 80px;
+            height: 80px;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-30px) rotate(180deg);
+            }
+        }
+
+        html[dir="rtl"] .error-title,
+        html[dir="rtl"] .error-description {
+            direction: rtl;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="/" class="logo">
+                    <div class="logo-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="20" height="16" x="2" y="4" rx="2"/>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                        </svg>
+                    </div>
+                    <span class="logo-text text-gold-premium">VIP Mail</span>
+                </a>
+
+                <div class="nav-links">
+                    <a href="/#features" data-i18n="nav_features">Features</a>
+                    <a href="/#pricing" data-i18n="nav_pricing">Pricing</a>
+                    <a href="/about" data-i18n="nav_about">About Us</a>
+                    <div class="lang-switcher">
+                        <button class="lang-btn" id="lang-en">EN</button>
+                        <button class="lang-btn" id="lang-ar">AR</button>
+                    </div>
+                    <button class="btn-login" data-i18n="nav_login">Sign In</button>
+                    <button class="btn-primary" data-i18n="nav_book">Book Your Email</button>
+                </div>
+
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="4" x2="20" y1="12" y2="12"/>
+                        <line x1="4" x2="20" y1="6" y2="6"/>
+                        <line x1="4" x2="20" y1="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <div class="mobile-menu-links">
+            <a href="/#features" data-i18n="nav_features">Features</a>
+            <a href="/#pricing" data-i18n="nav_pricing">Pricing</a>
+            <a href="/about" data-i18n="nav_about">About Us</a>
+            <div class="lang-switcher" style="justify-content: center; margin: 1rem 0;">
+                <button class="lang-btn" id="lang-en-mobile">EN</button>
+                <button class="lang-btn" id="lang-ar-mobile">AR</button>
+            </div>
+            <button class="btn-login" data-i18n="nav_login">Sign In</button>
+            <button class="btn-primary" data-i18n="nav_book">Book Your Email</button>
+        </div>
+    </div>
+
+    <section class="error-page">
+        <div class="error-bg">
+            <div class="error-gradient-1"></div>
+            <div class="error-gradient-2"></div>
+        </div>
+        <div class="error-grid"></div>
+
+        <div class="floating-elements">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+        </div>
+
+        <div class="error-content">
+            <div class="error-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="m15 9-6 6"/>
+                    <path d="m9 9 6 6"/>
+                </svg>
+            </div>
+
+            <h1 class="error-number">404</h1>
+            
+            <h2 class="error-title">
+                <span data-i18n="error_title">Page Not Found</span>
+            </h2>
+
+            <p class="error-description" data-i18n="error_description">
+                The page you're looking for doesn't exist or has been moved. Let's get you back to safety.
+            </p>
+
+            <div class="error-buttons">
+                <a href="/" class="btn-primary btn-lg" data-i18n="error_btn_home">Back to Home</a>
+                <a href="/contact" class="btn-outline btn-lg" data-i18n="error_btn_contact">Contact Support</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js?v=1.0.0"></script>
+    <script>
+        // Add translations for 404 page
+        if (typeof translations !== 'undefined') {
+            translations.en.error_title = "Page Not Found";
+            translations.en.error_description = "The page you're looking for doesn't exist or has been moved. Let's get you back to safety.";
+            translations.en.error_btn_home = "Back to Home";
+            translations.en.error_btn_contact = "Contact Support";
+
+            translations.ar.error_title = "الصفحة غير موجودة";
+            translations.ar.error_description = "الصفحة التي تبحث عنها غير موجودة أو تم نقلها. دعنا نعيدك إلى بر الأمان.";
+            translations.ar.error_btn_home = "العودة للصفحة الرئيسية";
+            translations.ar.error_btn_contact = "اتصل بالدعم";
+
+            // Re-initialize language to apply new translations
+            if (typeof initLanguage === 'function') {
+                setTimeout(() => {
+                    const savedLang = localStorage.getItem('preferredLang') || 'en';
+                    setLanguage(savedLang);
+                }, 100);
+            }
+        }
+    </script>
+</body>
+</html>
