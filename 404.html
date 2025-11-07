@@ -9,182 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <script src="translations.js?v=1.0.0"></script>
-    <style>
-        .error-page {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-            padding: 2rem 1rem;
-        }
-
-        .error-bg {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to bottom right, var(--background), var(--background), hsl(240, 10%, 8%));
-        }
-
-        .error-gradient-1 {
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(ellipse at top, hsla(47, 96%, 53%, 0.15), transparent 50%);
-        }
-
-        .error-gradient-2 {
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(ellipse at bottom right, hsla(280, 70%, 60%, 0.15), transparent 50%);
-        }
-
-        .error-grid {
-            position: absolute;
-            inset: 0;
-            background-image: 
-                linear-gradient(hsla(240, 10%, 15%, 0.1) 1px, transparent 1px),
-                linear-gradient(to right, hsla(240, 10%, 15%, 0.1) 1px, transparent 1px);
-            background-size: 4rem 4rem;
-            mask-image: radial-gradient(ellipse at center, black 50%, transparent 100%);
-        }
-
-        .error-content {
-            position: relative;
-            z-index: 10;
-            text-align: center;
-            max-width: 600px;
-            width: 100%;
-        }
-
-        .error-icon {
-            width: 150px;
-            height: 150px;
-            margin: 0 auto 2rem;
-            border-radius: 50%;
-            background: linear-gradient(135deg, hsla(47, 96%, 53%, 0.2), hsla(280, 70%, 60%, 0.2));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            animation: pulse-icon 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse-icon {
-            0%, 100% {
-                box-shadow: 0 0 0 0 hsla(47, 96%, 53%, 0.7);
-            }
-            50% {
-                box-shadow: 0 0 0 20px hsla(47, 96%, 53%, 0);
-            }
-        }
-
-        .error-icon svg {
-            color: var(--gold);
-            filter: drop-shadow(0 0 20px hsla(47, 96%, 53%, 0.6));
-        }
-
-        .error-number {
-            font-size: clamp(5rem, 15vw, 10rem);
-            font-weight: 900;
-            line-height: 1;
-            margin-bottom: 1rem;
-            background: linear-gradient(to right, var(--gold-light), var(--gold), hsl(47, 96%, 60%));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            filter: drop-shadow(0 0 20px hsla(47, 96%, 53%, 0.6)) drop-shadow(0 0 40px hsla(47, 96%, 53%, 0.4));
-            animation: gold-glow 3s ease-in-out infinite;
-        }
-
-        @keyframes gold-glow {
-            0%, 100% {
-                filter: drop-shadow(0 0 20px hsla(47, 96%, 53%, 0.6)) drop-shadow(0 0 40px hsla(47, 96%, 53%, 0.4));
-            }
-            50% {
-                filter: drop-shadow(0 0 30px hsla(47, 96%, 53%, 0.8)) drop-shadow(0 0 60px hsla(47, 96%, 53%, 0.6));
-            }
-        }
-
-        .error-title {
-            font-size: clamp(1.5rem, 4vw, 2.5rem);
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--foreground);
-        }
-
-        .error-description {
-            font-size: clamp(1rem, 2vw, 1.25rem);
-            color: var(--muted-foreground);
-            margin-bottom: 3rem;
-            line-height: 1.8;
-        }
-
-        .error-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            align-items: center;
-            justify-content: center;
-        }
-
-        @media (min-width: 640px) {
-            .error-buttons {
-                flex-direction: row;
-            }
-        }
-
-        .floating-elements {
-            position: absolute;
-            inset: 0;
-            overflow: hidden;
-            pointer-events: none;
-        }
-
-        .floating-element {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, hsla(47, 96%, 53%, 0.1), hsla(280, 70%, 60%, 0.1));
-            animation: float 15s ease-in-out infinite;
-        }
-
-        .floating-element:nth-child(1) {
-            top: 10%;
-            left: 10%;
-            animation-delay: 0s;
-        }
-
-        .floating-element:nth-child(2) {
-            top: 70%;
-            left: 80%;
-            animation-delay: 3s;
-            width: 150px;
-            height: 150px;
-        }
-
-        .floating-element:nth-child(3) {
-            top: 40%;
-            right: 10%;
-            animation-delay: 6s;
-            width: 80px;
-            height: 80px;
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0) rotate(0deg);
-            }
-            50% {
-                transform: translateY(-30px) rotate(180deg);
-            }
-        }
-
-        html[dir="rtl"] .error-title,
-        html[dir="rtl"] .error-description {
-            direction: rtl;
-        }
-    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -203,7 +27,7 @@
                 <div class="nav-links">
                     <a href="/#features" data-i18n="nav_features">Features</a>
                     <a href="/#pricing" data-i18n="nav_pricing">Pricing</a>
-                    <a href="/about" data-i18n="nav_about">About Us</a>
+                    <a href="about.html" data-i18n="nav_about">About Us</a>
                     <div class="lang-switcher">
                         <button class="lang-btn" id="lang-en">EN</button>
                         <button class="lang-btn" id="lang-ar">AR</button>
@@ -227,7 +51,7 @@
         <div class="mobile-menu-links">
             <a href="/#features" data-i18n="nav_features">Features</a>
             <a href="/#pricing" data-i18n="nav_pricing">Pricing</a>
-            <a href="/about" data-i18n="nav_about">About Us</a>
+            <a href="about.html" data-i18n="nav_about">About Us</a>
             <div class="lang-switcher" style="justify-content: center; margin: 1rem 0;">
                 <button class="lang-btn" id="lang-en-mobile">EN</button>
                 <button class="lang-btn" id="lang-ar-mobile">AR</button>
@@ -237,66 +61,126 @@
         </div>
     </div>
 
-    <section class="error-page">
-        <div class="error-bg">
-            <div class="error-gradient-1"></div>
-            <div class="error-gradient-2"></div>
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient-1"></div>
+            <div class="hero-gradient-2"></div>
         </div>
-        <div class="error-grid"></div>
+        <div class="hero-grid"></div>
 
-        <div class="floating-elements">
-            <div class="floating-element"></div>
-            <div class="floating-element"></div>
-            <div class="floating-element"></div>
-        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-pulse"></span>
+                    <span data-i18n="error_badge">Error 404</span>
+                </div>
 
-        <div class="error-content">
-            <div class="error-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"/>
-                    <path d="m15 9-6 6"/>
-                    <path d="m9 9 6 6"/>
-                </svg>
-            </div>
+                <h1 class="hero-title">
+                    <span class="text-gold-premium">404</span>
+                </h1>
 
-            <h1 class="error-number">404</h1>
-            
-            <h2 class="error-title">
-                <span data-i18n="error_title">Page Not Found</span>
-            </h2>
+                <p class="hero-subtitle" data-i18n="error_title">
+                    Page Not Found
+                </p>
 
-            <p class="error-description" data-i18n="error_description">
-                The page you're looking for doesn't exist or has been moved. Let's get you back to safety.
-            </p>
+                <p class="hero-description" data-i18n="error_description">
+                    The page you're looking for doesn't exist or has been moved. Let's get you back to safety.
+                </p>
 
-            <div class="error-buttons">
-                <a href="/" class="btn-primary btn-lg" data-i18n="error_btn_home">Back to Home</a>
-                <a href="/contact" class="btn-outline btn-lg" data-i18n="error_btn_contact">Contact Support</a>
+                <div class="hero-buttons">
+                    <a href="/" class="btn-primary btn-lg" data-i18n="error_btn_home">Back to Home</a>
+                    <a href="contact.html" class="btn-outline btn-lg" data-i18n="error_btn_contact">Contact Support</a>
+                </div>
             </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <div class="logo-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="20" height="16" x="2" y="4" rx="2"/>
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                            </svg>
+                        </div>
+                        <span class="text-gold-premium">VIP Mail</span>
+                    </div>
+                    <p data-i18n="footer_tagline">Secure and premium email for the digital elite</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4 data-i18n="footer_quick_links">Quick Links</h4>
+                    <ul>
+                        <li><a href="/#features" data-i18n="footer_features">Features</a></li>
+                        <li><a href="/#pricing" data-i18n="footer_pricing">Pricing</a></li>
+                        <li><a href="about.html" data-i18n="footer_about">About Us</a></li>
+                        <li><a href="contact.html" data-i18n="footer_contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 data-i18n="footer_legal">Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html" data-i18n="footer_privacy">Privacy Policy</a></li>
+                        <li><a href="terms.html" data-i18n="footer_terms">Terms of Service</a></li>
+                        <li><a href="refund.html" data-i18n="footer_refund">Refund Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 data-i18n="footer_follow">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://x.com/vipm_org" aria-label="X">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4l11.733 16h4.267l-11.733 -16z"/>
+                                <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61583630091976" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/vipmail_org/" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@vipm_org" aria-label="TikTok">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 VIP Mail. <span data-i18n="footer_rights">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js?v=1.0.0"></script>
     <script>
         // Add translations for 404 page
         if (typeof translations !== 'undefined') {
+            translations.en.error_badge = "Error 404";
             translations.en.error_title = "Page Not Found";
             translations.en.error_description = "The page you're looking for doesn't exist or has been moved. Let's get you back to safety.";
             translations.en.error_btn_home = "Back to Home";
             translations.en.error_btn_contact = "Contact Support";
 
+            translations.ar.error_badge = "خطأ 404";
             translations.ar.error_title = "الصفحة غير موجودة";
             translations.ar.error_description = "الصفحة التي تبحث عنها غير موجودة أو تم نقلها. دعنا نعيدك إلى بر الأمان.";
             translations.ar.error_btn_home = "العودة للصفحة الرئيسية";
             translations.ar.error_btn_contact = "اتصل بالدعم";
-
-            // Re-initialize language to apply new translations
-            if (typeof initLanguage === 'function') {
-                setTimeout(() => {
-                    const savedLang = localStorage.getItem('preferredLang') || 'en';
-                    setLanguage(savedLang);
-                }, 100);
-            }
         }
     </script>
 </body>
