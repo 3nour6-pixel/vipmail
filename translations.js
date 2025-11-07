@@ -68,9 +68,9 @@ const translations = {
         about_title: "About Us",
         about_intro: "We are VIP Mail, an email service specially designed for the digital elite who put security and privacy above all else. Our vision is to be the secure digital haven for your professional and personal identity in a fast-paced world.",
         about_values_title: "Our Core Values",
-        about_value1: "Advanced Security: We use the highest levels of encryption and Google Workspace's secure infrastructure to protect all your correspondence from any hacking or spying.",
+        about_value1: "Advanced Security: We use the highest levels of encryption and Fastmail's secure infrastructure to protect all your correspondence from any hacking or spying.",
         about_value2: "Uniqueness and Distinction: Your premium email address (@vipm.org) is a reflection of your sophisticated digital identity.",
-        about_value3: "Reliable Infrastructure: We use Google Workspace, one of the world's most reliable and secure email platforms, to ensure service continuity and data protection.",
+        about_value3: "Reliable Infrastructure: We use Fastmail, a trusted email provider with ISO 27001 certification and GDPR compliance, to ensure service continuity and data protection.",
 
         // Contact Page
         contact_title: "Contact Us",
@@ -81,13 +81,13 @@ const translations = {
         // Privacy Page
         privacy_title: "Privacy Policy",
         privacy_tagline: "Your security and data protection are our top priorities.",
-        privacy_intro: "VIP Mail is committed to protecting your data with the highest security standards. We use Google Workspace infrastructure to provide you with a reliable and secure email service, while ensuring the protection of your information through advanced encryption.",
+        privacy_intro: "VIP Mail is committed to protecting your data with the highest security standards. We use Fastmail infrastructure to provide you with a reliable and secure email service, while ensuring the protection of your information through advanced encryption.",
         privacy_encryption_title: "Advanced Encryption and Security",
-        privacy_encryption_desc: "All your messages and attachments are protected using military-grade encryption (TLS/SSL) during transmission and storage. We use Google Workspace's advanced security infrastructure, which includes multi-layer protection, threat detection, and continuous monitoring to ensure the safety of your data.",
+        privacy_encryption_desc: "All your messages and attachments are protected using industry-standard encryption (TLS 1.3, AES-256) during transmission and at-rest storage. We use Fastmail's secure infrastructure, which includes advanced spam filtering, virus scanning, and two-factor authentication to ensure the safety of your data.",
         privacy_data_title: "Data We Collect",
         privacy_data_desc: "We only collect data necessary to operate your account and provide the service: the email address you chose, payment information (processed by a trusted third party and we don't store card numbers), and basic login logs for security purposes only.",
         privacy_sharing_title: "Service Infrastructure and Data Protection",
-        privacy_sharing_desc: "VIP Mail uses Google Workspace as the email service infrastructure. Google Workspace complies with the highest international security standards and data protection regulations (including GDPR). Your data is stored securely on Google's servers with strict access controls. We do not access or read the content of your messages, and we are committed to protecting your privacy according to Google Workspace's privacy policies.",
+        privacy_sharing_desc: "VIP Mail uses Fastmail as the email service infrastructure. Fastmail is fully compliant with GDPR, SOC 2 Type II, and ISO 27001 standards. Fastmail operates its own data centers in the USA, Netherlands, and Japan with strict privacy protections. Fastmail does not sell user data, does not scan emails for advertising, and is committed to user privacy. We do not access or read the content of your messages, and we are committed to protecting your privacy according to Fastmail's privacy policies.",
 
         // Terms Page
         terms_title: "Terms of Service",
@@ -224,9 +224,9 @@ const translations = {
         about_title: "من نحن",
         about_intro: "نحن VIP Mail، خدمة البريد الإلكتروني المصممة خصيصًا للنخبة الرقمية التي تضع الأمان والخصوصية فوق كل اعتبار. رؤيتنا هي أن نكون الملاذ الرقمي الآمن لهويتك المهنية والشخصية في عالم متسارع.",
         about_values_title: "قيمنا الأساسية",
-        about_value1: "الأمان المتقدم: نستخدم أعلى مستويات التشفير والبنية التحتية الآمنة لـ Google Workspace لحماية جميع مراسلاتك من أي اختراق أو تجسس.",
+        about_value1: "الأمان المتقدم: نستخدم أعلى مستويات التشفير والبنية التحتية الآمنة لـ Fastmail لحماية جميع مراسلاتك من أي اختراق أو تجسس.",
         about_value2: "التفرد والتميز: عنوان بريدك الإلكتروني المميز (@vipm.org) هو انعكاس لهويتك الرقمية الراقية.",
-        about_value3: "بنية تحتية موثوقة: نستخدم Google Workspace، أحد أكثر منصات البريد الإلكتروني موثوقية وأمانًا في العالم، لضمان استمرارية الخدمة وحماية البيانات.",
+        about_value3: "بنية تحتية موثوقة: نستخدم Fastmail، مزود بريد إلكتروني موثوق حاصل على شهادة ISO 27001 ومتوافق مع GDPR، لضمان استمرارية الخدمة وحماية البيانات.",
 
         // Contact Page
         contact_title: "اتصل بنا",
@@ -237,13 +237,13 @@ const translations = {
         // Privacy Page
         privacy_title: "سياسة الخصوصية",
         privacy_tagline: "أمانك وحماية بياناتك على رأس أولوياتنا.",
-        privacy_intro: "تلتزم VIP Mail بحماية بياناتك بأعلى معايير الأمان. نستخدم البنية التحتية لـ Google Workspace لتقديم خدمة بريد إلكتروني موثوقة وآمنة، مع ضمان حماية معلوماتك من خلال التشفير المتقدم.",
+        privacy_intro: "تلتزم VIP Mail بحماية بياناتك بأعلى معايير الأمان. نستخدم البنية التحتية لـ Fastmail لتقديم خدمة بريد إلكتروني موثوقة وآمنة، مع ضمان حماية معلوماتك من خلال التشفير المتقدم.",
         privacy_encryption_title: "التشفير والأمان المتقدم",
-        privacy_encryption_desc: "يتم حماية جميع رسائلك ومرفقاتك باستخدام تشفير من الدرجة العسكرية (TLS/SSL) أثناء النقل والتخزين. نستخدم البنية الأمنية المتقدمة لـ Google Workspace، والتي تتضمن حماية متعددة الطبقات، والكشف عن التهديدات، والمراقبة المستمرة لضمان سلامة بياناتك.",
+        privacy_encryption_desc: "يتم حماية جميع رسائلك ومرفقاتك باستخدام تشفير قياسي صناعي (TLS 1.3، AES-256) أثناء النقل والتخزين. نستخدم البنية التحتية الآمنة لـ Fastmail، والتي تتضمن فلترة متقدمة للبريد المزعج، فحص الفيروسات، والمصادقة الثنائية لضمان سلامة بياناتك.",
         privacy_data_title: "البيانات التي نجمعها",
         privacy_data_desc: "نحن نجمع فقط البيانات الضرورية لتشغيل حسابك وتقديم الخدمة: عنوان البريد الإلكتروني الذي اخترته، ومعلومات الدفع (تتم معالجتها من قبل طرف ثالث موثوق ولا نخزن أرقام البطاقات)، وسجلات الدخول الأساسية لأغراض أمنية بحتة.",
         privacy_sharing_title: "البنية التحتية للخدمة وحماية البيانات",
-        privacy_sharing_desc: "تستخدم VIP Mail خدمة Google Workspace كبنية تحتية للبريد الإلكتروني. تلتزم Google Workspace بأعلى المعايير الدولية للأمان ولوائح حماية البيانات (بما في ذلك GDPR). يتم تخزين بياناتك بشكل آمن على خوادم Google مع ضوابط صارمة للوصول. نحن لا نصل أو نقرأ محتوى رسائلك، ونلتزم بحماية خصوصيتك وفقًا لسياسات خصوصية Google Workspace.",
+        privacy_sharing_desc: "تستخدم VIP Mail خدمة Fastmail كبنية تحتية للبريد الإلكتروني. تلتزم Fastmail بالكامل بمعايير GDPR وSOC 2 Type II وISO 27001. تدير Fastmail مراكز بياناتها الخاصة في الولايات المتحدة وهولندا واليابان مع حماية صارمة للخصوصية. لا تبيع Fastmail بيانات المستخدمين، ولا تفحص البريد الإلكتروني لأغراض إعلانية، وملتزمة بخصوصية المستخدمين. نحن لا نصل أو نقرأ محتوى رسائلك، ونلتزم بحماية خصوصيتك وفقًا لسياسات خصوصية Fastmail.",
 
         // Terms Page
         terms_title: "شروط الاستخدام",
